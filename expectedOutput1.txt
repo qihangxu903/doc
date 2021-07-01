@@ -1,0 +1,15 @@
+	for (i = 0; i < 1024; i++) {
+		if (i == 8)
+			ASSERT_F32_NEAR_TOL(1024, dst[i].r, 1e-8);
+		else
+			ASSERT_F32_NEAR_TOL(0, dst[i].r, 1e-4);
+		ASSERT_F32_NEAR_TOL(0, dst[i].i, 1e-4);
+	}
+
+Above is the code that checks the output. 
+From the code snippet, it suggests that:
+the real part of the 8th output element should be equal to 1024;
+the real part of all other elements should be equal to 0;
+the imaginary part of all elements should be equal to 0.
+
+	
